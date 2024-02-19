@@ -6,7 +6,32 @@ const routes: Routes = [
   {
     path:  '',
     component: MainPageComponent
-  }
+  },
+  {
+    path: 'achievements',
+    component: MainPageComponent
+  },
+  {
+    path: 'transformations',
+    component: MainPageComponent
+  },
+  {
+    path: 'gallery',
+    component: MainPageComponent
+  },
+  {
+    path: 'about',
+    component: MainPageComponent
+  },
+  {
+    path: 'book-training',
+    component: MainPageComponent
+  },
+  {
+    path: 'contact',
+    component: MainPageComponent
+  },
+
 ];
 
 @NgModule({

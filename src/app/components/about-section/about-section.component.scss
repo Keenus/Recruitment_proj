@@ -1,0 +1,106 @@
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ffd740;
+  background: #ffd740;
+  .top-photo {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      margin: 1rem 0 0;
+    }
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+  .right {
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3{
+      display: none;
+    }
+    p {
+      font-size: 1rem;
+      margin: 0;
+      padding: .5rem;
+      text-align: justify;
+    }
+    button {
+      margin: 1rem;
+      border-radius: 5px;
+      background: #37474F;
+      color: #ffd740;
+      transition: .3s;
+      &:hover {
+        background: #ffd740;
+        color: #37474F;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: row;
+    gap: 3rem;
+    height: calc(70vh - 200px);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffd740;
+    margin: 2rem 1rem;
+    padding: 0 2rem 2rem 2rem;
+    max-width: 1200px;
+    .top-photo {
+      height: 100%;
+      width: 100%;
+      padding: .5rem;
+      background: #ffd740;
+      border-radius: 12px;
+      img {
+        border: 1px solid #fff;
+        width:100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .right {
+      height: 100%;
+      h3 {
+        display: block;
+        font-size: 1.5rem;
+        padding: 1rem;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+      }
+      p {
+        font-size: 1.2rem;
+        padding: 1rem;
+        text-align: justify;
+        color: #fff;
+      }
+      button {
+        margin-left: auto;
+        background: #ffd740;
+        color: #37474F;
+        transition: .3s;
+        &:hover {
+          background: #37474F;
+          color: #ffd740;
+        }
+      }
+    }
+  }
+}

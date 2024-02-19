@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {IsMobileService} from "../../services/isMobile/is-mobile.service";
 
 @Component({
   selector: 'app-main-page',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class MainPageComponent {
 
+  isMobile$: boolean = false;
+
+  constructor(
+    private isMobileService: IsMobileService
+  ) {
+    this.isMobileService.isMobile$.subscribe((data: boolean) => {
+      this.isMobile$ = data;
+    })
+  }
 }

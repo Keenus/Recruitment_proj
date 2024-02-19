@@ -1,0 +1,30 @@
+.main-page-container {
+  background: #37474F;
+  overflow-x: hidden;
+}
+.first-section {
+  width: 100%;
+  height: calc(100vh - 200px);
+  background: #37474F;
+}
+.section {
+  width: 100%;
+  background: #37474F;
+  h2 {
+    text-align: center;
+    margin: 3rem 0 0;
+    padding: 0 0 3rem;
+    color: #ffd740;
+    font-size: 2rem;
+    border-bottom: 1px solid #ffd740;
+  }
+}
+
+@media (min-width: 768px) {
+  .section{
+    height: calc(100vh - 300px);
+    h2 {
+      border-bottom: none;
+    }
+  }
+}
