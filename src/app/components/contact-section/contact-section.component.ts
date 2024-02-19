@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-contact-section',
@@ -22,4 +22,7 @@ export class ContactSectionComponent {
     this.email = '';
     this.message = '';
   }
+
+  @Input() isMainPage: boolean = false;
+
 }
