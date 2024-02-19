@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 import {IsMobileService} from "../../services/isMobile/is-mobile.service";
 
 @Component({
@@ -32,10 +32,8 @@ export class ImagesSliderComponent {
 
   ];
 
-  constructor() {
-  }
 
-  ngOnChanges() {
+  ngOnInit() {
     this.autoChangeSlide();
   }
 
@@ -56,7 +54,6 @@ export class ImagesSliderComponent {
   autoChangeSlide() {
     setInterval(() => {
       this.changeSlide(1);
-
-    }, 1000);
+    }, 5000);
   }
 }

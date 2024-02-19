@@ -1,4 +1,4 @@
-<div class="about-section">
+<div class="about-section" [ngClass]="{'auto-height' : !isMainPage}">
   <div class="top-photo">
     <img src="/assets/images/trainer_photo1.jpg" alt="trener personalny">
     <h2>
@@ -12,8 +12,28 @@
     <p>
       Jestem trenerem personalnym z wieloletnim doświadczeniem. Moją pasją jest sport, zdrowie oraz motywowanie innych do osiągania swoich celów. W swojej pracy kładę nacisk na indywidualne podejście do każdego klienta, co pozwala mi na osiąganie najlepszych rezultatów.
     </p>
-    <button mat-raised-button routerLink="/about">
+    <button mat-raised-button routerLink="/about" *ngIf="isMainPage">
       Czytaj więcej
     </button>
+    <div class="more-details" *ngIf="!isMainPage">
+      <h4>
+        Jak to się zaczęło?
+      </h4>
+      <p>
+        Moja przygoda z treningiem zaczęła się w wieku 16 lat, kiedy to zacząłem trenować w klubie fitness. Od tamtej pory sport stał się moją pasją, którą chciałem rozwijać.
+      </p>
+      <h4>
+        Kariera
+      </h4>
+      <p>
+        Przez wiele lat pracowałem w różnych klubach fitness, gdzie zdobywałem doświadczenie oraz doskonaliłem swoje umiejętności. W 2015 roku postanowiłem założyć własne studio personalne, w którym mogę realizować swoją wizję treningu.
+      </p>
+      <h4>
+        Moje osiągnięcia
+      </h4>
+      <p>
+        W swojej karierze trenerskiej miałem okazję pracować z wieloma klientami, którzy osiągnęli znakomite rezultaty. Moim największym osiągnięciem jest pomoc w osiągnięciu wymarzonej sylwetki, zdrowia oraz samopoczucia moim podopiecznym. Zobacz kilka z nich w zakładce "<a routerLink="/achievements">Osiągnięcia</a>".
+      </p>
+    </div>
   </div>
 </div>

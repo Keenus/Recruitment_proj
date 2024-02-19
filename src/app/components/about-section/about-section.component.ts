@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-about-section',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-section.component.scss']
 })
 export class AboutSectionComponent {
+
+  @Input() isMainPage: boolean = false;
 
 }
