@@ -1,4 +1,4 @@
-<div class="about-section" [ngClass]="{'auto-height' : !isMainPage}">
+<div class="about-section" [ngClass]="{'auto-height' : !isMainPage , 'align-start': !isMainPage}">
   <div class="top-photo">
     <img src="/assets/images/trainer_photo1.jpg" alt="trener personalny">
     <h2>
@@ -6,7 +6,7 @@
     </h2>
   </div>
   <div class="right">
-    <h3>
+    <h3 *ngIf="isMainPage">
       Pozwól że opowiem Ci coś o sobie
     </h3>
     <p>
@@ -32,7 +32,7 @@
         Moje osiągnięcia
       </h4>
       <p>
-        W swojej karierze trenerskiej miałem okazję pracować z wieloma klientami, którzy osiągnęli znakomite rezultaty. Moim największym osiągnięciem jest pomoc w osiągnięciu wymarzonej sylwetki, zdrowia oraz samopoczucia moim podopiecznym. Zobacz kilka z nich w zakładce "<a routerLink="/achievements">Osiągnięcia</a>".
+        W swojej karierze trenerskiej miałem okazję pracować z wieloma klientami, którzy osiągnęli znakomite rezultaty. Moim największym sukcesem jest pomoc w osiągnięciu wymarzonej sylwetki, zdrowia oraz samopoczucia moim podopiecznym. Zobacz kilka z nich w zakładce "<a routerLink="/achievements">Osiągnięcia</a>".
       </p>
     </div>
   </div>

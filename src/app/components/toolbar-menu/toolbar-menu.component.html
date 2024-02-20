@@ -1,4 +1,4 @@
-<mat-toolbar color="accent">
+<mat-toolbar color="accent" class="fixed-menu" [ngClass]="{'transparent-bg': isScrolled}">
   <mat-toolbar-row>
     <div class="nav-bar">
       <button mat-icon-button routerLink="/" routerLinkActive="active">
@@ -6,15 +6,15 @@
           home
         </mat-icon>
       </button>
-      <span class="lg-menu-items" *ngIf="!isMobile$">
+      <span class="logo" routerLink="/">
+        <img [ngClass]="{'large' : !isScrolled}" src="assets/images/page-logo1.webp" alt="logo">
+      </span>
+      <span class="lg-menu-items">
         <button mat-button *ngFor="let item of menuItems" routerLinkActive="active" routerLink="{{item.path}}">
           {{item.name}}
         </button>
       </span>
-      <span class="logo">
-        <img [ngClass]="{'large' : !isMobile$}" src="assets/images/page-logo1.webp" alt="logo">
-      </span>
-      <span *ngIf="isMobile$">
+      <span class="lg-none">
           <button mat-button [matMenuTriggerFor]="menu">
             <span>
               Menu

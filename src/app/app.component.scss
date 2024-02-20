@@ -1,9 +1,20 @@
 * {
   box-sizing: border-box;
 }
+
 .main-container {
   min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   background: #37474F;
+}
+
+.margin-top {
+  margin-top: 50px;
+}
+
+@media (min-width:768px) {
+  .margin-top {
+    margin-top: 64px;
+  }
 }

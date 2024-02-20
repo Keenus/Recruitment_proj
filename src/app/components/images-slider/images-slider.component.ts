@@ -1,5 +1,4 @@
-import {ChangeDetectorRef, Component} from '@angular/core';
-import {IsMobileService} from "../../services/isMobile/is-mobile.service";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-images-slider',

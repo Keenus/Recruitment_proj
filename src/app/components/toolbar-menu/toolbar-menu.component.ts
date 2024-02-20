@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import {IsMobileService} from "../../services/isMobile/is-mobile.service";
+import {Component, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-toolbar-menu',
@@ -8,7 +7,16 @@ import {IsMobileService} from "../../services/isMobile/is-mobile.service";
 })
 export class ToolbarMenuComponent {
 
-  isMobile$: boolean = false;
+  @HostListener('window:scroll', ['$event'])
+
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 10;
+  }
+  constructor() {
+    this.isScrolled = window.scrollY > 10;
+  }
+
+  isScrolled = false;
 
   menuItems = [
     {name: 'Osiągnięcia', path: '/achievements'},
@@ -18,14 +26,5 @@ export class ToolbarMenuComponent {
     {name: 'Umów trening', path: '/book-training'},
     {name: 'Kontakt', path: '/contact'},
   ];
-
-  constructor(
-    private isMobile: IsMobileService
-  ) {
-    this.isMobile.isMobile$.subscribe((data) => {
-      console.log(data);
-      this.isMobile$ = data;
-    });
-  }
 
 }

@@ -36,7 +36,7 @@
     }
     p {
       color: #fff;
-      font-size: 1rem;
+      font-size: 1.3rem;
       margin: 0;
       padding: .5rem;
       text-align: justify;
@@ -77,6 +77,9 @@
     }
   }
 }
+.align-start {
+  align-items: flex-start;
+}
 
 @media (min-width: 768px) {
   .about-section {
@@ -109,15 +112,15 @@
       height: 100%;
       h3 {
         display: block;
-        font-size: 1.5rem;
+        font-size: 2rem;
         padding: 1rem;
         text-align: center;
         color: #fff;
         width: 100%;
       }
       p {
-        font-size: 1.2rem;
-        padding: 1rem;
+        font-size: 1.5rem;
+        padding: 0 1rem 1rem;
         text-align: justify;
         color: #fff;
       }
@@ -140,6 +143,7 @@
   }
   .auto-height {
     margin: 4rem auto;
+    padding: 4rem 0 0;
     height: auto;
   }
 }
