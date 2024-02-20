@@ -17,14 +17,33 @@
   </mat-form-field>
     <button class="submit-button" mat-raised-button color="accent" (click)="sendMessage()">Wyślij</button>
     <h3 class="under-submit-text" *ngIf="isMainPage">..lub, sprawdź inne możliwości kontaktu
-      <a href="/contact">tutaj</a>
+      <a routerLink="/contact">tutaj</a>
     </h3>
     <div class="more-contact-info" *ngIf="!isMainPage">
       <h3 class="under-submit-text">lub skontaktuj się ze mną bezpośrednio</h3>
-      <p>zadzwoń: +48 123 456 789</p>
-      <p>napisz na instagramie: <a href="">@instagram</a></p>
-      <p>napisz na facebooku: <a href="">@facebook</a></p>
-      <p>po prostu wpadnij na zajęcia w klubie FITGYM w Krakowie , w każdy poniedziałek i czwartek w godzinach 16:00 - 20:00</p>
+      <p>
+        <mat-icon>phone</mat-icon>
+        <span>Zadzwoń do mnie:</span>
+        <a href="tel: +48123456789">
+          +48 123-456-789
+        </a>
+      </p>
+      <p>
+        <mat-icon>camera_alt</mat-icon>
+        <span>
+          Napisz na instagramie:
+        </span>
+        <a href="">@Kowalski_fit</a></p>
+      <p>
+        <mat-icon>facebook</mat-icon>
+        <span>
+          Napisz na facebooku:
+        </span>
+        <a href="">@Kowalski_fit</a></p>
+      <p>
+        <mat-icon>location_on</mat-icon>
+        <span>Po prostu wpadnij na zajęcia w klubie FITGYM w Krakowie, ul.Treningowa 12 , w każdy poniedziałek i czwartek w godzinach 16:00 - 20:00</span>
+      </p>
     </div>
   </div>
 </div>
