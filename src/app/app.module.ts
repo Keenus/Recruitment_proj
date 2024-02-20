@@ -17,6 +17,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from '@angular/forms';
 import { FooterBarComponent } from './components/footer-bar/footer-bar.component';
+import { AchievementsSectionComponent } from './components/achievements-section/achievements-section.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FooterBarComponent } from './components/footer-bar/footer-bar.component
     AboutSectionComponent,
     ContactSectionComponent,
     FooterBarComponent,
+    AchievementsSectionComponent,
   ],
   imports: [
     BrowserModule,
