@@ -19,6 +19,7 @@ import {FormsModule} from '@angular/forms';
 import { FooterBarComponent } from './components/footer-bar/footer-bar.component';
 import { AchievementsSectionComponent } from './components/achievements-section/achievements-section.component';
 import { TransformationsSectionComponent } from './components/transformations-section/transformations-section.component';
+import { GallerySectionComponent } from './components/gallery-section/gallery-section.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { TransformationsSectionComponent } from './components/transformations-se
     FooterBarComponent,
     AchievementsSectionComponent,
     TransformationsSectionComponent,
+    GallerySectionComponent,
   ],
   imports: [
     BrowserModule,

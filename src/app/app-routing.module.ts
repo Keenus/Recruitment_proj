@@ -5,6 +5,7 @@ import {AboutSectionComponent} from "./components/about-section/about-section.co
 import {ContactSectionComponent} from "./components/contact-section/contact-section.component";
 import {AchievementsSectionComponent} from "./components/achievements-section/achievements-section.component";
 import {TransformationsSectionComponent} from "./components/transformations-section/transformations-section.component";
+import {GallerySectionComponent} from "./components/gallery-section/gallery-section.component";
 
 const routes: Routes = [
   {
@@ -21,7 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'gallery',
-    component: MainPageComponent
+    component: GallerySectionComponent
   },
   {
     path: 'about',
