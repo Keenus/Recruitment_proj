@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TransformationsInterface} from "../../../assets/intefaces/transformations-interface";
 
 @Component({
   selector: 'app-transformations-section',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class TransformationsSectionComponent {
 
-  clientsTransformations = [
+  clientsTransformations: TransformationsInterface[] = [
     {
       id: 0,
       client: 'Zbigniew',

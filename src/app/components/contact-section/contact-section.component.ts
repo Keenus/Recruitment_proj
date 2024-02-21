@@ -3,17 +3,17 @@ import {Component, Input} from '@angular/core';
 @Component({
   selector: 'app-contact-section',
   templateUrl: './contact-section.component.html',
-  styleUrls: ['./contact-section.component.scss']
+  styleUrls: ['./contact-section.component.scss'],
 })
 export class ContactSectionComponent {
+
+  @Input() isMainPage: boolean = false;
+
   name: string = '';
   email: string = '';
   message: string = '';
 
   sendMessage() {
-    console.log('Name: ' + this.name);
-    console.log('Email: ' + this.email);
-    console.log('Message: ' + this.message);
     this.clearForm();
   }
 
@@ -23,6 +23,5 @@ export class ContactSectionComponent {
     this.message = '';
   }
 
-  @Input() isMainPage: boolean = false;
 
 }

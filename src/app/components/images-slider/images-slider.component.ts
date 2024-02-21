@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {SliderImagesInterface} from "../../../assets/intefaces/sliderImages-interface";
 
 @Component({
   selector: 'app-images-slider',
@@ -6,23 +7,23 @@ import {Component} from '@angular/core';
   styleUrls: ['./images-slider.component.scss']
 })
 export class ImagesSliderComponent {
-  sliderImages = [
+  sliderImages: SliderImagesInterface[] = [
     {
-      index: 0,
+      id: 0,
       src: 'assets/images/img1_section1.webp',
       alt: 'plan treningowy',
       headerText: 'Siła jest w Tobie!',
       paragraphText: 'Odkryj swoje nieograniczone możliwości',
     },
     {
-      index: 1,
+      id: 1,
       src: 'assets/images/img2_section1.webp',
       alt: 'osiągnięcia',
       headerText: 'Silniejszy każdego dnia!',
       paragraphText: 'Małe kroki do wielkich zmian',
     },
     {
-      index: 2,
+      id: 2,
       src: 'assets/images/img3_section1.webp',
       alt: 'siłownia',
       headerText: 'Przekraczaj swoje granice!',

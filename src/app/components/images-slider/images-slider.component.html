@@ -1,5 +1,5 @@
 <div class="slide-images-container">
-  <span class="single-slide" *ngFor="let image of sliderImages" [ngClass]="{'active' : currentSlide === image.index, 'inactive': currentSlide != image.index}">
+  <span class="single-slide" *ngFor="let image of sliderImages" [ngClass]="{'active' : currentSlide === image.id, 'inactive': currentSlide != image.id}">
     <span class="header">
       <h2>{{image.headerText}}</h2>
       <p>{{image.paragraphText}}</p>

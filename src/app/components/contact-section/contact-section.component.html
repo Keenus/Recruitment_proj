@@ -1,51 +1,53 @@
-<div class="contact-section">
-  <h2>Napisz do mnie po więcej informacji</h2>
-  <div class="form-container">
-  <div class="user-info">
-    <mat-form-field>
-      <mat-label for="name">Imię</mat-label>
-      <input matInput id="name" [(ngModel)]="name">
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label for="email">Email</mat-label>
-      <input matInput id="email" [(ngModel)]="email">
-    </mat-form-field>
-  </div>
-  <mat-form-field>
-    <mat-label for="message">Wiadomość</mat-label>
-    <textarea matInput id="message" [(ngModel)]="message"></textarea>
-  </mat-form-field>
-    <button class="submit-button" mat-raised-button color="accent" (click)="sendMessage()">Wyślij</button>
-    <h3 class="under-submit-text" *ngIf="isMainPage">..lub, sprawdź inne możliwości kontaktu
-      <a routerLink="/contact">tutaj</a>
-    </h3>
-    <div class="more-contact-info" *ngIf="!isMainPage">
-      <h3 class="under-submit-text">lub skontaktuj się ze mną bezpośrednio</h3>
-      <div class="flex-row">
-        <p>
-          <mat-icon>phone</mat-icon>
-          <span>Zadzwoń do mnie:</span>
-          <a href="tel: +48123456789">
-            +48 123-456-789
-          </a>
-        </p>
-        <p>
-          <mat-icon>camera_alt</mat-icon>
-          <span>
+<div class="section-container" [ngClass]="{'margin-top-0' : isMainPage}">
+  <div class="contact-section">
+    <h2>Napisz do mnie po więcej informacji</h2>
+    <div class="form-container">
+      <div class="user-info">
+        <mat-form-field>
+          <mat-label for="name">Imię</mat-label>
+          <input matInput id="name" [(ngModel)]="name">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="email">Email</mat-label>
+          <input matInput id="email" [(ngModel)]="email">
+        </mat-form-field>
+      </div>
+      <mat-form-field>
+        <mat-label for="message">Wiadomość</mat-label>
+        <textarea matInput id="message" [(ngModel)]="message"></textarea>
+      </mat-form-field>
+      <button class="submit-button" mat-raised-button color="accent" (click)="sendMessage()">Wyślij</button>
+      <h3 class="under-submit-text" *ngIf="isMainPage">..lub, sprawdź inne możliwości kontaktu
+        <a routerLink="/contact">tutaj</a>
+      </h3>
+      <div class="more-contact-info" *ngIf="!isMainPage">
+        <h3 class="under-submit-text">lub skontaktuj się ze mną bezpośrednio</h3>
+        <div class="flex-row">
+          <p>
+            <mat-icon>phone</mat-icon>
+            <span>Zadzwoń do mnie:</span>
+            <a href="tel: +48123456789">
+              +48 123-456-789
+            </a>
+          </p>
+          <p>
+            <mat-icon>camera_alt</mat-icon>
+            <span>
           Napisz na instagramie:
         </span>
-          <a href="">@Kowalski_fit</a></p>
-        <p>
-          <mat-icon>facebook</mat-icon>
-          <span>
+            <a href="">@Kowalski_fit</a></p>
+          <p>
+            <mat-icon>facebook</mat-icon>
+            <span>
           Napisz na facebooku:
         </span>
-          <a href="">@Kowalski_fit</a></p>
+            <a href="">@Kowalski_fit</a></p>
+        </div>
+        <p>
+          <mat-icon>location_on</mat-icon>
+          <span>Po prostu wpadnij na zajęcia w klubie FITGYM w Krakowie, ul.Treningowa 12 , w każdy poniedziałek i czwartek w godzinach 16:00 - 20:00</span>
+        </p>
       </div>
-      <p>
-        <mat-icon>location_on</mat-icon>
-        <span>Po prostu wpadnij na zajęcia w klubie FITGYM w Krakowie, ul.Treningowa 12 , w każdy poniedziałek i czwartek w godzinach 16:00 - 20:00</span>
-      </p>
     </div>
   </div>
 </div>

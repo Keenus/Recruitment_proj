@@ -1,10 +1,4 @@
-.about-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #37474F;
-  .top-photo {
+.top-photo {
     padding: 1rem;
     text-align: center;
     display: flex;
@@ -31,7 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h3{
+    h3 {
       display: none;
     }
     p {
@@ -75,24 +69,13 @@
         }
       }
     }
-  }
 }
 .align-start {
   align-items: flex-start;
 }
 
 @media (min-width: 768px) {
-  .about-section {
-    flex-direction: row;
-    gap: 3rem;
-    height: calc(70vh - 200px);
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #ffd740;
-    margin: 2rem 1rem;
-    padding: 0 2rem 2rem 2rem;
-    max-width: 1200px;
-    .top-photo {
+  .top-photo {
       width: 100%;
       padding: .5rem;
       background: #ffd740;
@@ -146,4 +129,3 @@
     padding: 4rem 0 1rem;
     height: auto;
   }
-}

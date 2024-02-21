@@ -1,16 +1,18 @@
-<div class="achievements-container">
-    <h1>Oto kilka najważniejszych kursów, szkoleń i osiągnięć zdobytych przeze mnie w ciągu ostatnich kilku lat</h1>
+<div class="section-container achievements-container">
+  <div class="section-header">
+    <h2>Oto kilka najważniejszych kursów, szkoleń i osiągnięć zdobytych przeze mnie w ciągu ostatnich kilku lat</h2>
+  </div>
   <div class="achievements-list">
-    <div class="single-achievement" *ngFor="let achievement of achievementsList">
+    <div class="single-achievement" *ngFor="let achievement of achievementsList, let id = index ">
       <h2>
         {{achievement.title}} <small>{{achievement.date}}</small>
       </h2>
       <div class="achievement-description">
-        <p role="button" (click)="showDetails(achievement.id)">
-          <mat-icon class="scale-2" [textContent]="!activeDetails.includes(achievement.id) ? 'arrow_drop_down'  : 'arrow_drop_up'"></mat-icon>
-          <span [textContent]="!activeDetails.includes(achievement.id) ? 'Pokaż szczegóły'  : 'Ukryj szczegóły '"></span>
+        <p role="button" (click)="showDetails(id)">
+          <mat-icon class="scale-2" [textContent]="!activeDetails.includes(id) ? 'arrow_drop_down'  : 'arrow_drop_up'"></mat-icon>
+          <span [textContent]="!activeDetails.includes(id) ? 'Pokaż szczegóły'  : 'Ukryj szczegóły '"></span>
         </p>
-        <div class="achievement-more-details" [ngClass]="{'d-none': !activeDetails.includes(achievement.id)}">
+        <div class="achievement-more-details" [ngClass]="{'d-none': !activeDetails.includes(id)}">
           <h3>
             {{achievement.description}}
           </h3>

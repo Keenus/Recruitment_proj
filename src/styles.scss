@@ -4,3 +4,45 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Garamond, serif, "Helvetica Neue", sans-serif; background: #37474F}
 * { box-sizing: border-box; }
+
+.section-container {
+  margin: 4rem auto;
+  font-size: 1.2rem;
+  .section-header {
+    text-align: center;
+    padding: 0 0 3rem;
+    margin: 0 0 3rem;
+    color: #ffd740;
+    font-size: 2rem;
+    border-bottom: 1px solid #ffd740;
+  }
+}
+
+.section-container_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #37474F;
+}
+
+@media (min-height: 768px) {
+  .section-container {
+    padding: 3rem 0 0;
+    margin: 4rem auto;
+    .section-header {
+      border-bottom: none;
+    }
+  }
+  .section-container_2 {
+      flex-direction: row;
+      gap: 3rem;
+      height: calc(70vh - 200px);
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #ffd740;
+      margin: 2rem 1rem;
+      padding: 0 2rem 2rem 2rem;
+      max-width: 1200px;
+  }
+}
