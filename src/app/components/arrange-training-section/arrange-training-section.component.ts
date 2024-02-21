@@ -31,7 +31,6 @@ export class ArrangeTrainingSectionComponent {
     if (this.trainingForm.invalid) {
       return;
     }
-    console.log(this.trainingForm.value)
     this.trainingForm.reset();
     this.isSend = true;
   }
