@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,6 +19,7 @@ import { FooterBarComponent } from './components/footer-bar/footer-bar.component
 import { AchievementsSectionComponent } from './components/achievements-section/achievements-section.component';
 import { TransformationsSectionComponent } from './components/transformations-section/transformations-section.component';
 import { GallerySectionComponent } from './components/gallery-section/gallery-section.component';
+import {MAT_DATE_LOCALE} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -46,7 +46,7 @@ import { GallerySectionComponent } from './components/gallery-section/gallery-se
     MatInputModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

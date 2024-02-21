@@ -17,7 +17,7 @@
         <textarea matInput id="message" [(ngModel)]="message"></textarea>
       </mat-form-field>
       <button class="submit-button" mat-raised-button color="accent" (click)="sendMessage()">Wyślij</button>
-      <h3 class="under-submit-text" *ngIf="isMainPage">..lub, sprawdź inne możliwości kontaktu
+      <h3 class="under-submit-text" *ngIf="isMainPage">..lub sprawdź inne możliwości kontaktu
         <a routerLink="/contact">tutaj</a>
       </h3>
       <div class="more-contact-info" *ngIf="!isMainPage">

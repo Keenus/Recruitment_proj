@@ -9,6 +9,7 @@ import {AchievementsInterface} from "../../../assets/intefaces/achievements-inte
 export class AchievementsSectionComponent {
 
   activeDetails: number[] = [];
+  hasShown: number[] = [];
 
   achievementsList: AchievementsInterface[] = [
     {
@@ -45,6 +46,9 @@ export class AchievementsSectionComponent {
   ]
 
   showDetails(id: number) {
+    if(!this.hasShown.includes(id)) {
+      this.hasShown.push(id);
+    }
     if (this.activeDetails.includes(id)) {
       this.activeDetails = this.activeDetails.filter(item => item !== id);
     } else {

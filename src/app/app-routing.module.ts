@@ -6,6 +6,9 @@ import {ContactSectionComponent} from "./components/contact-section/contact-sect
 import {AchievementsSectionComponent} from "./components/achievements-section/achievements-section.component";
 import {TransformationsSectionComponent} from "./components/transformations-section/transformations-section.component";
 import {GallerySectionComponent} from "./components/gallery-section/gallery-section.component";
+import {
+  ArrangeTrainingSectionComponent
+} from "./components/arrange-training-section/arrange-training-section.component";
 
 const routes: Routes = [
   {
@@ -30,7 +33,7 @@ const routes: Routes = [
   },
   {
     path: 'book-training',
-    component: MainPageComponent
+    component: ArrangeTrainingSectionComponent,
   },
   {
     path: 'contact',
@@ -40,7 +43,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled',
+  })],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

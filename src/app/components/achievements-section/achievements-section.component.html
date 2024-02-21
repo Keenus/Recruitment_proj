@@ -12,7 +12,8 @@
           <mat-icon class="scale-2" [textContent]="!activeDetails.includes(id) ? 'arrow_drop_down'  : 'arrow_drop_up'"></mat-icon>
           <span [textContent]="!activeDetails.includes(id) ? 'Pokaż szczegóły'  : 'Ukryj szczegóły '"></span>
         </p>
-        <div class="achievement-more-details" [ngClass]="{'d-none': !activeDetails.includes(id)}">
+        <div class="achievement-more-details"
+             [ngClass]="{'d-none': !activeDetails.includes(id) , 'd-block' : activeDetails.includes(id) ,'d-none-start': !hasShown.includes(id)}">
           <h3>
             {{achievement.description}}
           </h3>
