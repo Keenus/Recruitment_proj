@@ -14,12 +14,18 @@ import { AboutSectionComponent } from './components/about-section/about-section.
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FooterBarComponent } from './components/footer-bar/footer-bar.component';
 import { AchievementsSectionComponent } from './components/achievements-section/achievements-section.component';
 import { TransformationsSectionComponent } from './components/transformations-section/transformations-section.component';
 import { GallerySectionComponent } from './components/gallery-section/gallery-section.component';
-import {MAT_DATE_LOCALE} from "@angular/material/core";
+import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
+import {
+  ArrangeTrainingSectionComponent
+} from "./components/arrange-training-section/arrange-training-section.component";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {CommonModule} from "@angular/common";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -33,6 +39,7 @@ import {MAT_DATE_LOCALE} from "@angular/material/core";
     AchievementsSectionComponent,
     TransformationsSectionComponent,
     GallerySectionComponent,
+    ArrangeTrainingSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +52,11 @@ import {MAT_DATE_LOCALE} from "@angular/material/core";
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    CommonModule,
+    MatTooltipModule,
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'en-GB'}],
   bootstrap: [AppComponent]
