@@ -4,6 +4,7 @@ import {MainPageComponent} from "./components/main-page/main-page.component";
 import {AboutSectionComponent} from "./components/about-section/about-section.component";
 import {ContactSectionComponent} from "./components/contact-section/contact-section.component";
 import {AchievementsSectionComponent} from "./components/achievements-section/achievements-section.component";
+import {TransformationsSectionComponent} from "./components/transformations-section/transformations-section.component";
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'transformations',
-    component: MainPageComponent
+    component: TransformationsSectionComponent
   },
   {
     path: 'gallery',

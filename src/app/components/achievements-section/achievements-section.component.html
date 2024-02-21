@@ -7,10 +7,10 @@
       </h2>
       <div class="achievement-description">
         <p role="button" (click)="showDetails(achievement.id)">
-          <mat-icon class="scale-2" [textContent]="activeDetails != achievement.id ? 'arrow_drop_down'  : 'arrow_drop_up'"></mat-icon>
-          <span [textContent]="activeDetails != achievement.id ? 'Pokaż szczegóły'  : 'Ukryj szczegóły '"></span>
+          <mat-icon class="scale-2" [textContent]="!activeDetails.includes(achievement.id) ? 'arrow_drop_down'  : 'arrow_drop_up'"></mat-icon>
+          <span [textContent]="!activeDetails.includes(achievement.id) ? 'Pokaż szczegóły'  : 'Ukryj szczegóły '"></span>
         </p>
-        <div class="achievement-more-details" [ngClass]="{'d-none': activeDetails != achievement.id}">
+        <div class="achievement-more-details" [ngClass]="{'d-none': !activeDetails.includes(achievement.id)}">
           <h3>
             {{achievement.description}}
           </h3>

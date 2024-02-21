@@ -18,6 +18,7 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from '@angular/forms';
 import { FooterBarComponent } from './components/footer-bar/footer-bar.component';
 import { AchievementsSectionComponent } from './components/achievements-section/achievements-section.component';
+import { TransformationsSectionComponent } from './components/transformations-section/transformations-section.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AchievementsSectionComponent } from './components/achievements-section/
     ContactSectionComponent,
     FooterBarComponent,
     AchievementsSectionComponent,
+    TransformationsSectionComponent,
   ],
   imports: [
     BrowserModule,

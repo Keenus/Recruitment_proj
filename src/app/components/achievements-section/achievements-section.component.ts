@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AchievementsSectionComponent {
 
-  activeDetails: number = -1;
+  activeDetails: number[] = [];
 
   achievementsList = [
     {
@@ -40,7 +40,7 @@ export class AchievementsSectionComponent {
     },
     {
       id: 4,
-      title: 'Pierwsze miejsce w amatorskich zawodach strongman',
+      title: 'Zwycięstwo w zawodach strongman',
       date: '20.10.2019',
       description: 'Pierwsze miejsce w amatorskich zawodach strongman w kategorii do 90kg w Sosnowcu',
       src: 'assets/images/trophy_2.webp'
@@ -49,10 +49,10 @@ export class AchievementsSectionComponent {
   ]
 
   showDetails(id: number) {
-    if (this.activeDetails === id) {
-      this.activeDetails = -1;
+    if (this.activeDetails.includes(id)) {
+      this.activeDetails = this.activeDetails.filter(item => item !== id);
     } else {
-      this.activeDetails = id;
+      this.activeDetails.push(id);
     }
   }
 }

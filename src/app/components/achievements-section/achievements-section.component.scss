@@ -48,6 +48,7 @@
             img {
               background: #ffd740;
               max-width: 100%;
+              max-height: 600px;
               object-fit: cover;
               border-radius: 12px;
             }
@@ -69,6 +70,7 @@
       margin: 3rem 0;
     }
     .achievements-list {
+      align-items: flex-start;
       padding-left: 5%;
     }
     .single-achievement {

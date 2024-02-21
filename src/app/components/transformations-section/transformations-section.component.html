@@ -1,0 +1,26 @@
+<div class="section-container">
+  <div class="section-header">
+    <h2>Transformacje moich klientów</h2>
+  </div>
+  <div class="transform-list">
+    <div class="transform-item" *ngFor="let item of clientsTransformations">
+      <div class="item-image">
+        <img src="{{item.image}}" alt="{{item.client}}">
+      </div>
+      <div class="item-content">
+        <div class="item-header">
+          <h3>{{item.client}}
+            <small>-{{item.weight_before - item.weight_after}}kg</small>
+          </h3>
+        </div>
+        <div class="item-description">
+          <p><span>Waga początkowa:</span><b>{{item.weight_before}}kg</b></p>
+          <p><span>Waga końcowa:</span><b class="text-yellow">{{item.weight_after}}kg</b></p>
+          <p><span>Czas:</span><b>{{item.duration}} dni</b></p>
+          <p><span>Dieta:</span><b>{{item.diet}}</b></p>
+          <p>{{item.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
