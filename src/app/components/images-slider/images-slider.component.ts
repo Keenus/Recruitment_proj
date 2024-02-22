@@ -48,7 +48,7 @@ export class ImagesSliderComponent {
       this.currentSlide = 0;
       return;
     }
-      this.currentSlide += number;
+    this.currentSlide += number;
 
   }
 

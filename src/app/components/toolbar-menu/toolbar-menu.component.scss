@@ -36,6 +36,33 @@
   &__lg-menu-items {
     display: none;
   }
+
+  ::ng-deep &__mobile-menu {
+    width: 210px;
+    right: 0;
+    top: 10px;
+    position: absolute;
+    background: #37474F;
+    .mat-mdc-menu-content {
+      background: #2e3f46;
+      padding: 1rem;
+    }
+    button {
+      padding: 1rem;
+      color: #fff;
+      border-bottom: 1px solid #37474F;
+      background: transparent;
+      min-height: 32px;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.backdrop-filter {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px) {

@@ -74,7 +74,23 @@
 }
 
 @media (min-width: 768px) {
+  .section-container {
+    position: relative;
+  }
+  .section-container-background {
+    background: url("../../../assets/images/img3_section1.webp") no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.3);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 9;
+  }
   .contact-section {
+    position: relative;
+    z-index: 999;
+    background: transparent;
     max-width: 1200px;
     width: 100%;
     margin: 2rem auto;
@@ -123,10 +139,6 @@
       display: flex;
       justify-content: space-between;
       gap: 1rem;
-    }
-
-    &__contact-option {
-      margin: 1rem 0;
     }
   }
 }

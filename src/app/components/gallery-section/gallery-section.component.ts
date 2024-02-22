@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class GallerySectionComponent {
   galleryImages: string[] = [
-    'assets/images/gallery_photo_1.jpg',
-    'assets/images/gallery_photo_2.jpg',
-    'assets/images/gallery_photo_3.jpg',
-    'assets/images/gallery_photo_4.jpg',
-    'assets/images/gallery_photo_5.jpg',
-    'assets/images/gallery_photo_6.jpg',
-    'assets/images/gallery_photo_7.jpg',
-    'assets/images/gallery_photo_8.jpg',
-    'assets/images/gallery_photo_9.jpg',
+    'assets/images/gallery_photo_1.webp',
+    'assets/images/gallery_photo_2.webp',
+    'assets/images/gallery_photo_3.webp',
+    'assets/images/gallery_photo_4.webp',
+    'assets/images/gallery_photo_5.webp',
+    'assets/images/gallery_photo_6.webp',
+    'assets/images/gallery_photo_7.webp',
+    'assets/images/gallery_photo_8.webp',
+    'assets/images/gallery_photo_9.webp',
   ]
 
 }

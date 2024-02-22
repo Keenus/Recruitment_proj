@@ -18,7 +18,7 @@
           <textarea matInput id="message" formControlName="message" required></textarea>
         </mat-form-field>
         <span class="contact-section__submit-button" [matTooltip]="!isFormValid ? 'Uzupełnij wymagane pola' : ''">
-         <button type="submit" [disabled]="contactForm.invalid"
+         <button type="submit" [disabled]="!isFormValid"
                  mat-raised-button color="accent" >Wyślij</button>
         </span>
       </form>
@@ -35,26 +35,26 @@
       </h3>
     </div>
     <div class="contact-section__more-contact-info" *ngIf="!isMainPage">
-        <div class="contact-section__more-contact-options">
-          <p class="contact-section__contact-option">
-            <mat-icon>phone</mat-icon>
-            <span>Zadzwoń do mnie:</span>
-            <a class="contact-section__contact-option-link" href="tel: +48123456789">
-              +48 123-456-789
-            </a></p>
-          <p class="contact-section__contact-option">
-            <mat-icon>camera_alt</mat-icon>
-            <span>Napisz na instagramie:</span>
-            <a class="contact-section__contact-option-link" href="">@Kowalski_fit</a></p>
-          <p class="contact-section__contact-option">
-            <mat-icon>facebook</mat-icon>
-            <span>Napisz na facebooku:</span>
-            <a class="contact-section__contact-option-link" href="">@Kowalski_fit</a></p>
-        </div>
+      <div class="contact-section__more-contact-options">
         <p class="contact-section__contact-option">
-          <mat-icon>location_on</mat-icon>
-          <span>Po prostu wpadnij na zajęcia w klubie FITGYM w Krakowie, ul.Treningowa 12 , w każdy poniedziałek i czwartek w godzinach 16:00 - 20:00</span>
-        </p>
+          <mat-icon>phone</mat-icon>
+          <span>Zadzwoń do mnie:</span>
+          <a class="contact-section__contact-option-link" href="tel: +48123456789">
+            +48 123-456-789
+          </a></p>
+        <p class="contact-section__contact-option">
+          <mat-icon>camera_alt</mat-icon>
+          <span>Napisz na instagramie:</span>
+          <a class="contact-section__contact-option-link" href="">@Kowalski_fit</a></p>
+        <p class="contact-section__contact-option">
+          <mat-icon>facebook</mat-icon>
+          <span>Napisz na facebooku:</span>
+          <a class="contact-section__contact-option-link" href="">@Kowalski_fit</a></p>
       </div>
+      <p class="contact-section__contact-option">
+        <mat-icon>location_on</mat-icon>
+        <span>Po prostu wpadnij na zajęcia w klubie FITGYM w Krakowie, ul.Treningowa 12 , w każdy poniedziałek i czwartek w godzinach 16:00 - 20:00</span>
+      </p>
     </div>
   </div>
+</div>

@@ -40,13 +40,13 @@
   }
 
   &__achievement-image {
-      background: #ffd740;
-      max-width: 100%;
-      max-height: 600px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
+    background: #ffd740;
+    max-width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
   }
+}
 
 
 @media (min-width: 768px) {

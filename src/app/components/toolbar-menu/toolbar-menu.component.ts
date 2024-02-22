@@ -26,5 +26,4 @@ export class ToolbarMenuComponent {
     {name: 'Umów trening', path: '/book-training'},
     {name: 'Kontakt', path: '/contact'},
   ];
-
 }

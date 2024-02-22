@@ -21,7 +21,7 @@
             </span>
             <mat-icon>menu</mat-icon>
           </button>
-          <mat-menu #menu="matMenu">
+          <mat-menu #menu="matMenu" class="fixed-menu__mobile-menu" >
             <button mat-menu-item *ngFor="let item of menuItems" routerLinkActive="active" routerLink="{{item.path}}">
               {{item.name}}
             </button>
