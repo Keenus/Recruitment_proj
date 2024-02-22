@@ -10,20 +10,20 @@
     gap: 1rem;
     flex-direction: column;
     justify-content: center;
-    &__input {
-      flex-basis: 50%;
-    }
-    &__submit-button {
-      font-size: 1rem;
-      button {
-        width: 100%;
-        padding: 1.5rem;
-      }
+  }
+  &__input {
+    flex-basis: 50%;
+  }
+  &__submit-button {
+    font-size: 1rem;
+    button {
+      width: 100%;
+      padding: 1.5rem;
     }
   }
 }
 
-.succes-container {
+.success-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -35,7 +35,6 @@
   color: #ffd740;
   border: 1px solid #ffd740;
   border-radius: 12px;
-  &__content {
     &__title {
       font-size: 2rem;
       margin: 0 0 1rem;
@@ -54,7 +53,6 @@
       color: #fff;
     }
   }
-}
 
 @media (min-width: 768px) {
   .training-form {
@@ -64,22 +62,20 @@
     &__form {
       flex-direction: row;
       flex-wrap: wrap;
-      &__input {
-        flex-basis: calc(50% - 1rem);
-      }
-      &__submit-button {
-        width: calc(30% - 1rem);
-        align-self: center;
-      }
+    }
+    &__input {
+      flex-basis: calc(50% - 1rem);
+    }
+    &__submit-button {
+      width: calc(30% - 1rem);
+      align-self: center;
     }
   }
-  .succes-container {
+  .success-container {
     max-width: 1200px;
     width: auto;
-    &__content {
       &__description {
         text-align: center;
       }
-    }
   }
 }

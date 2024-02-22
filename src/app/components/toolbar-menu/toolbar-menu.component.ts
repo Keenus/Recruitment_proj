@@ -19,10 +19,10 @@ export class ToolbarMenuComponent {
   isScrolled = false;
 
   menuItems = [
+    {name: 'O mnie', path: '/about'},
+    {name: 'Galeria', path: '/gallery'},
     {name: 'Osiągnięcia', path: '/achievements'},
     {name: 'Przemiany', path: '/transformations'},
-    {name: 'Galeria', path: '/gallery'},
-    {name: 'O mnie', path: '/about'},
     {name: 'Umów trening', path: '/book-training'},
     {name: 'Kontakt', path: '/contact'},
   ];

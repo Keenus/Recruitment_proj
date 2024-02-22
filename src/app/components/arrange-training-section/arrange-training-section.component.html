@@ -1,32 +1,32 @@
 <div class="section-container" [ngClass]="{'d-none': isSend}">
-  <div class="section-header">
+  <div class="section-container__header">
     <h2 class="section-title">Zapytaj o trening</h2>
   </div>
-  <div class="section-content">
+  <div class="section-container__content">
    <div class="training-form">
      <div class="training-form__description">
         <p>Jeśli jesteś zainteresowany treningiem, skontaktuj się z nami. Wypełnij poniższy formularz, a my skontaktujemy się z Tobą w celu ustalenia szczegółów.</p>
      </div>
      <form [formGroup]="trainingForm" (ngSubmit)="onSubmit()" class="training-form__form">
-     <mat-form-field class="training-form__form__input">
+     <mat-form-field class="training-form__input">
        <mat-label>Wybierz termin</mat-label>
        <input matInput [matDatepicker]="picker" formControlName="date" required>
        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
        <mat-datepicker #picker></mat-datepicker>
      </mat-form-field>
-     <mat-form-field class="training-form__form__input">
+     <mat-form-field class="training-form__input">
        <mat-label>Imię i nazwisko</mat-label>
        <input matInput id="name" type="text" formControlName="name" required>
      </mat-form-field>
-     <mat-form-field class="training-form__form__input">
+     <mat-form-field class="training-form__input">
        <mat-label>Adres e-mail</mat-label>
        <input matInput id="email" type="text" formControlName="email" required>
      </mat-form-field>
-     <mat-form-field class="training-form__form__input">
+     <mat-form-field class="training-form__input">
        <mat-label>Numer telefonu</mat-label>
        <input matInput id="phone" type="text" formControlName="phone" required>
      </mat-form-field>
-       <span class="training-form__form__submit-button" [matTooltip]="!isFormValid ? 'Uzupełnij wymagane pola' : ''">
+       <span class="training-form__submit-button" [matTooltip]="!isFormValid ? 'Uzupełnij wymagane pola' : ''">
          <button type="submit" [disabled]="trainingForm.invalid"
                  mat-raised-button color="accent" >Wyślij</button>
        </span>
@@ -34,10 +34,10 @@
    </div>
   </div>
 </div>
-<div class="succes-container" [ngClass]="{'d-block': isSend, 'd-none-start': !isSend}">
-  <div class="succes-container__content">
-    <h2 class="succes-container__content__title">Gratulacje!</h2>
-    <p class="succes-container__content__subtitle">Zrobiłeś/aś pierwszy krok do wymarzonej formy!</p>
-    <p class="succes-container__content__description">Skontaktujemy się z Tobą w celu ustalenia szczegółów.</p>
+<div class="success-container" [ngClass]="{'d-block': isSend, 'd-none-start': !isSend}">
+  <div class="success-container__content">
+    <h2 class="success-container__title">Gratulacje!</h2>
+    <p class="success-container__subtitle">Zrobiłeś/aś pierwszy krok do wymarzonej formy!</p>
+    <p class="success-container__description">Skontaktujemy się z Tobą w celu ustalenia szczegółów.</p>
   </div>
 </div>

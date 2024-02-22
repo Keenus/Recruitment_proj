@@ -1,11 +1,11 @@
 <div class="section-container">
-  <div class="section-header">
+  <div class="section-container__header">
     <h2 class="section-title">Galeria zdjęć z naszych treningów</h2>
   </div>
-  <div class="section-content">
+  <div class="section-container__content">
     <div class="gallery">
       <div class="gallery__item" *ngFor="let pic of galleryImages">
-        <img src="{{pic}}" alt="Zdjęcie z treningu">
+        <img class="gallery__image" src="{{pic}}" alt="Zdjęcie z treningu">
       </div>
     </div>
   </div>

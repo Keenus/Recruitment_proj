@@ -1,60 +1,52 @@
 .achievements-container {
-  padding: 0 1rem;
-  .achievements-list {
+  &__achievements-list {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
     flex-wrap: wrap;
+  }
+  &__single-achievement {
+    border-bottom: 2px solid #ffd740;
+    padding: 1rem 2rem;
+    border-radius: 12px 12px 0 0;
+    background: #2e3f46;
+    color: #fff;
+    transition: ease-in-out 0.3s;
+  }
+  &__single-achievement-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 
-    .single-achievement {
-      border-bottom: 2px solid #ffd740;
-      padding: 1rem 2rem;
-      border-radius: 12px 12px 0 0;
-      background: #2e3f46;
-      color: #fff;
-      transition: ease-in-out 0.3s;
-
-      h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-
-        small {
-          font-size: 0.8rem;
-        }
-      }
-
-      .achievement-description {
-        transition: ease-in-out 0.3s;
-
-        p {
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-
-          .scale-2 {
-            transform: scale(1.2);
-          }
-        }
-
-        .achievement-more-details {
-          .achievement-image {
-            img {
-              background: #ffd740;
-              max-width: 100%;
-              max-height: 600px;
-              object-fit: cover;
-              border-radius: 12px;
-            }
-          }
-        }
-      }
+    small {
+      font-size: 0.8rem;
     }
   }
-}
+
+  &__achievement-description {
+    transition: ease-in-out 0.3s;
+  }
+  &____achievement-description-text {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    .scale-2 {
+      transform: scale(1.2);
+    }
+  }
+
+  &__achievement-image {
+      background: #ffd740;
+      max-width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
 
 
 @media (min-width: 768px) {
@@ -62,10 +54,10 @@
     max-width: 1200px;
     margin: 4rem auto;
     padding: 3rem 0;
-    .achievements-list {
+    &__achievements-list {
       align-items: flex-start;
     }
-    .single-achievement {
+    &__single-achievement {
       flex-basis: 30%;
       flex-grow: 1;
     }

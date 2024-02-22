@@ -1,24 +1,24 @@
 <div class="section-container achievements-container">
-  <div class="section-header">
+  <div class="section-container__header">
     <h2>Oto kilka najważniejszych kursów, szkoleń i osiągnięć zdobytych przeze mnie w ciągu ostatnich kilku lat</h2>
   </div>
-  <div class="achievements-list">
-    <div class="single-achievement" *ngFor="let achievement of achievementsList, let id = index ">
-      <h2>
+  <div class="achievements-container__achievements-list">
+    <div class="achievements-container__single-achievement" *ngFor="let achievement of achievementsList, let id = index ">
+      <h2 class="achievements-container__single-achievement-title">
         {{achievement.title}} <small>{{achievement.date}}</small>
       </h2>
-      <div class="achievement-description">
-        <p role="button" (click)="showDetails(id)">
+      <div class="achievements-container__achievement-description">
+        <p class="achievements-container__achievement-description-text" role="button" (click)="showDetails(id)">
           <mat-icon class="scale-2" [textContent]="!activeDetails.includes(id) ? 'arrow_drop_down'  : 'arrow_drop_up'"></mat-icon>
           <span [textContent]="!activeDetails.includes(id) ? 'Pokaż szczegóły'  : 'Ukryj szczegóły '"></span>
         </p>
-        <div class="achievement-more-details"
+        <div class="achievements-container__achievement-more-details"
              [ngClass]="{'d-none': !activeDetails.includes(id) , 'd-block' : activeDetails.includes(id) ,'d-none-start': !hasShown.includes(id)}">
           <h3>
             {{achievement.description}}
           </h3>
-          <div class="achievement-image">
-            <img src="{{achievement.src}}" alt="{{achievement.title}}">
+          <div>
+            <img class="achievements-container__achievement-image" src="{{achievement.src}}" alt="{{achievement.title}}">
           </div>
         </div>
       </div>

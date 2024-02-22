@@ -1,15 +1,15 @@
-<div class="slide-images-container">
-  <span class="single-slide" *ngFor="let image of sliderImages" [ngClass]="{'active' : currentSlide === image.id, 'inactive': currentSlide != image.id}">
-    <span class="header">
-      <h2>{{image.headerText}}</h2>
-      <p>{{image.paragraphText}}</p>
+<div class="slider-container">
+  <span class="slider-container__single-slide" *ngFor="let image of sliderImages" [ngClass]="{'active' : currentSlide === image.id, 'inactive': currentSlide != image.id}">
+    <span class="slider-container__header">
+      <h2 class="slider-container__header-title">{{image.headerText}}</h2>
+      <p class="slider-container__header-subtitle">{{image.paragraphText}}</p>
     </span>
-    <img src="{{image.src}}" alt="{{image.alt}}">
+    <img class="slider-container__image" src="{{image.src}}" alt="{{image.alt}}">
   </span>
-  <button (click)="changeSlide(-1)" class="slide-left" mat-icon-button>
+  <button (click)="changeSlide(-1)" class="slider-container__slide-left" mat-icon-button>
     <mat-icon>keyboard_arrow_left</mat-icon>
   </button>
-  <button (click)="changeSlide(1)" class="slide-right" mat-icon-button>
+  <button (click)="changeSlide(1)" class="slider-container__slide-right" mat-icon-button>
     <mat-icon>keyboard_arrow_right</mat-icon>
   </button>
 </div>

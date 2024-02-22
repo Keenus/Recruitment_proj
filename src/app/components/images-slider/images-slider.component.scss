@@ -1,13 +1,62 @@
-.slide-images-container {
+.slider-container {
   width: 100%;
   height: 100%;
   position: relative;
-  img {
+  &__single-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  &__header {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 100%;
+    padding: 0 10px;
+  }
+  &__header-title {
+        font-size: 4rem;
+        margin: 0;
+        padding: 0;
+      }
+  &__header-subtitle {
+        font-size: 1.5rem;
+        padding: 0 2vw;
+      }
+  &__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: brightness(30%);
   }
+  &__slide-left {
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    transform: translateY(-50%) translateX(50%);
+    color: #fff;
+    mat-icon {
+      transform: scale(2);
+    }
+  }
+
+  &__slide-right {
+    position: absolute;
+    z-index: 9;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-50%) translateX(-50%);
+    color: #fff;
+    mat-icon {
+      transform: scale(2);
+    }
+  }
+}
+
   .active {
     display: block;
     z-index: 8;
@@ -17,66 +66,16 @@
     z-index: 7;
     animation: shadow 1s forwards;
   }
-}
-.single-slide{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  .header {
-    position: absolute;
-    z-index: 9;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    width: 100%;
-    padding: 0 10px;
-    h2 {
-      font-size: 4rem;
-      margin: 0;
-      padding: 0;
-    }
-    p {
-      font-size: 1.5rem;
-      padding: 0 2vw;
-    }
-  }
-}
-.slide-left {
-  position: absolute;
-  z-index: 9;
-  left: 0;
-  bottom: 0;
-  transform: translateY(-50%) translateX(50%);
-  color: #fff;
-  mat-icon {
-    transform: scale(2);
-  }
-}
-
-.slide-right {
-  position: absolute;
-  z-index: 9;
-  bottom: 0;
-  right: 0;
-  transform: translateY(-50%) translateX(-50%);
-  color: #fff;
-  mat-icon {
-    transform: scale(2);
-  }
-}
 
 @media (min-width: 768px) {
-  .single-slide{
-    .header{
-      padding: 0 30vw 0 10vw;
-    }
-  }
-  .slide-images-container {
-    .slide-left ,.slide-right {
+  .slider-container {
+    &__slide-left ,&__slide-right {
       top: 50%;
     }
-  }
+    &__header{
+        padding: 0 30vw 0 10vw;
+      }
+    }
 }
 
 @keyframes slideLeft {

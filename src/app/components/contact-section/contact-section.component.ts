@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-contact-section',
@@ -9,18 +10,29 @@ export class ContactSectionComponent {
 
   @Input() isMainPage: boolean = false;
 
-  name: string = '';
-  email: string = '';
-  message: string = '';
+  contactForm = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    message: new FormControl(''),
+  });
+  isFormValid: boolean = false;
+  isSend: boolean = false
+
+  ngOnInit() {
+    this.contactForm.valueChanges.subscribe((value) => {
+      this.isFormValid = this.contactForm.valid;
+    });
+  }
 
   sendMessage() {
-    this.clearForm();
+    if(this.contactForm.valid) {
+      this.isSend = true;
+      this.clearForm();
+    }
   }
 
   clearForm() {
-    this.name = '';
-    this.email = '';
-    this.message = '';
+    this.contactForm.reset();
   }
 
 
